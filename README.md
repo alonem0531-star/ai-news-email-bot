@@ -126,7 +126,7 @@ cat /Users/minmin/ai-news-line-bot/launchd.err.log
 
 ## GitHub Actionsで毎朝メール送信
 
-`.github/workflows/daily-ai-news-email.yml` は毎日 `07:00 Asia/Tokyo` に実行されます。GitHubのスケジュールはUTC基準なので、workflowでは `22:00 UTC` を指定しています。
+`.github/workflows/daily-ai-news-email.yml` は毎日 `04:00 Asia/Tokyo` に実行されます。GitHubのスケジュールはUTC基準なので、workflowでは `19:00 UTC` を指定しています。
 
 GitHub repositoryの `Settings > Secrets and variables > Actions > Repository secrets` に以下を登録してください。
 
