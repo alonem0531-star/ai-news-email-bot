@@ -1,0 +1,6 @@
+.env
+.venv/
+.pycache/
+__pycache__/
+launchd.out.log
+launchd.err.log
