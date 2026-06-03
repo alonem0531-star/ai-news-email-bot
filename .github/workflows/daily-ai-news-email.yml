@@ -3,7 +3,8 @@ name: Daily AI News Email
 on:
   workflow_dispatch:
   schedule:
-    - cron: "5 19 * * *"
+    # 04:17 JST. Avoid minute 0 because scheduled workflows can be delayed or dropped during peak load.
+    - cron: "17 19 * * *"
 
 jobs:
   send-email:
@@ -28,6 +29,11 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Show schedule time
+        run: |
+          date -u '+UTC: %Y-%m-%d %H:%M:%S'
+          TZ=Asia/Tokyo date '+JST: %Y-%m-%d %H:%M:%S'
 
       - name: Send AI news email
         run: python main.py
