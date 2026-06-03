@@ -3,7 +3,7 @@ name: Daily AI News Email
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 19 * * *"
+    - cron: "5 19 * * *"
 
 jobs:
   send-email:
